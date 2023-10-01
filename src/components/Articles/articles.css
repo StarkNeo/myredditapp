@@ -1,0 +1,30 @@
+.source-details{
+    display: flex;
+    padding-left: 0px;
+    width: 90%;
+}
+
+.source-details li{
+    margin-right: 2.5rem;
+}
+.state-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    height: 2rem;
+    padding: 0px;
+}
+.icons-article{
+    width: 20px;
+}
+
+.img-article{
+    width: 95%;
+}
+.bar-element{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    width: 4rem;
+    
+}
