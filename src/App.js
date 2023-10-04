@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { Comments } from './components/test';
 import { TitleBar } from './components/TitleNav';
 import { NavAsideLeft } from './components/AsideLeft/NavigationLeft';
 import { NavAsideRight } from './components/AsideRight/NavigationRight';
-import { Article } from './components/Articles/Articles';
+import { Articles } from './components/Articles/Articles';
 function App() {
   return (
     <div className="App">
@@ -15,7 +14,7 @@ function App() {
         <NavAsideLeft />
         <section id='articles'>
         CENTER SPACE
-        <Article />
+        <Articles />
         </section>
         <NavAsideRight />
       </main>
