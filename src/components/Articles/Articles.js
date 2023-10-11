@@ -6,11 +6,9 @@ import { arreglo } from "../../services/apiconnect";
 
 export const Articles=(props)=>{
     const [comments, setComments] = useState(arreglo);
-    
-    
-
+    console.log(arreglo);
     return (
-        comments.map(element=>(<Article key={element.data.id} data={element.data} />))
+        comments.map(element=>(<Article key={element.data.id} data={element.data} permalink={element.data.permalink} />))
       
     )
 }
