@@ -4,7 +4,7 @@ import { TitleBar } from './components/TitleNav';
 import { NavAsideLeft } from './components/AsideLeft/NavigationLeft';
 import { NavAsideRight } from './components/AsideRight/NavigationRight';
 import { Articles } from './components/Articles/Articles';
-
+import { Carousel } from './components/Carousel/Carousel';
 function App() {
   return (
     <div className="App">
@@ -14,8 +14,8 @@ function App() {
       <main>
         <NavAsideLeft />
         <section id='articles'>
-        CENTER SPACE
-        <Articles />
+        <Carousel />
+       <Articles />
         </section>
         <NavAsideRight />
       </main>

@@ -13,15 +13,43 @@ JSON URL: https://www.reddit.com/search.json?q=cake%20recipes
 https://www.reddit.com/{subreddit_name_prefixed}/comments/{id}/what_is_something_that_smells_great_but_isnt/
 
 */
+//FUNCTION FOR ARRAY OF CAROUSEL
+const sortArrayObjects = (array) => {
+    let swapped = true;
+    let topTen =[];
+    while (swapped) {
+        swapped = false;
+        for (let index = 0; index < (array.length - 1); index++) {
+            if (array[index].data.score < array[index + 1].data.score) {
+                swapped = true;
+                let temp = array[index];
+                array[index] = array[index + 1]
+                array[index + 1] = temp
+            }
+        }
+    }
+    for (let i = 0; i < 10; i++) {
+        topTen.push(array[i])
+    }
+    return topTen;
+}
+
+
+
 
 
 export const getArticles = async () => {
     const response = await fetch('https://www.reddit.com/r/popular.json')
     const json = await response.json();
-    
+
     return json.data.children
 }
 
+export const getCarousel = async () => {
+    const response = await fetch('https://www.reddit.com/r/popular.json');
+    const json = await response.json();
+    return sortArrayObjects(json.data.children, 1)
+}
 /*
 export const search = async () => {
     const response = await fetch(`https://www.reddit.com/r/Jujutsushi/comments/jujutsu_kaisen_chapter_238_prerelease_leaks_thread`);
@@ -29,9 +57,11 @@ export const search = async () => {
     return json
 }*/
 
-export const getPosts = async (link)=>{
-    let response = await fetch(`https://www.reddit.com${link.slice(0,-1)}.json`);
+export const getPosts = async (link) => {
+    let response = await fetch(`https://www.reddit.com${link.slice(0, -1)}.json`);
     let json = await response.json();
     return json;
 }
 export let arreglo = await getArticles();
+export let carousel = await getCarousel()
+console.log(carousel);

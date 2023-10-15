@@ -6,8 +6,7 @@ import './articles.css';
 import { Comments } from "../Comments/Comment";
 import { useState, useEffect } from "react";
 import { getPosts } from "../../services/apiconnect";
-
-
+import { NavAsideRight } from "../AsideRight/NavigationRight";
 
 export const Article = (props) => {
     const [showComments, setShowComments] = useState(false);
@@ -88,7 +87,6 @@ export const Article = (props) => {
         posts: posts
     }
 
-    
     return (
         <>
             <details>
@@ -105,8 +103,10 @@ export const Article = (props) => {
                 <li key={2} className="bar-element"><img className="icons-article" src={arrowDown} /><h5 className="counters">{data.down}</h5></li>
                 <li key={3} className="bar-element" onClick={handleDisplayComments}><img className="icons-article" src={comments} /><h5 className="counters">{data.num_comments}</h5></li>
             </ul>
+            
             <Comments data={props.data} style={commentsStyle} adds={posts} onClick={handleDisplayComments}/>
-
+            
+                     
         </>
 
     )

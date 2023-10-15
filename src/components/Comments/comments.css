@@ -4,9 +4,9 @@
     height: 40%;
     overflow-y: auto;
     text-align: justify;
-    margin-top: 1rem;
     background-color: whitesmoke;
-    
+    margin-top: -10%;
+    margin-left: 5%;
 }
 
 .close-btn{

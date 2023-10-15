@@ -1,16 +1,12 @@
 import React from "react";
+import { Comments } from "../Comments/Comment";
 
-export const NavAsideRight = () => {
+export const NavAsideRight = (props) => {
 
     return (
         <section id="communities">
-            <legend>POPULAR COMMUNITIES</legend>
-            <ul>
-                <li>Comm 1</li>
-                <li>Comm 2</li>
-            </ul>
-            
-
+            <legend>COMMENTS</legend>
+            <h1>{props.title}</h1>
         </section>
 
     )

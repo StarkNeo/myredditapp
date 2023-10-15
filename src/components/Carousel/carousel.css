@@ -1,0 +1,41 @@
+#slides{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.slide{
+    border-radius: 10px;
+    width: 15rem;
+    height: 15rem;
+    display: block;
+    background-color:chocolate
+
+}
+
+.slider-btn{
+    width: 3rem;
+    height: 3rem;
+    
+}
+video{
+    border-radius: 10px;
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    object-fit:cover;
+}
+.video-data{
+    position: relative;
+    margin-top: -40%;
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
