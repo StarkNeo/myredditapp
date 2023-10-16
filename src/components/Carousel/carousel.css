@@ -11,7 +11,8 @@
     width: 15rem;
     height: 15rem;
     display: block;
-    background-color:chocolate
+    background-color:chocolate;
+    margin-left: 0.5rem;
 
 }
 
@@ -38,4 +39,7 @@ video{
     align-items: center;
     justify-items: center;
     text-align: center;
+}
+a{
+    text-decoration: none;
 }

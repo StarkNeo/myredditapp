@@ -10,7 +10,7 @@ import { NavAsideRight } from "../AsideRight/NavigationRight";
 
 export const Article = (props) => {
     const [showComments, setShowComments] = useState(false);
-    const [posts, setPosts]= useState(null)
+    const [posts, setPosts] = useState(null)
 
 
 
@@ -21,13 +21,13 @@ export const Article = (props) => {
 
     const handleDisplayComments = async () => {
         if (posts === null) {
-            let result =await getPosts(props.permalink)
-            setPosts(result[1].data.children)    
-        } 
+            let result = await getPosts(props.permalink)
+            setPosts(result[1].data.children)
+        }
         setShowComments(!showComments)
 
     }
-  
+
 
     let ups, down, comment;
     let now = new Date();
@@ -89,24 +89,28 @@ export const Article = (props) => {
 
     return (
         <>
-            <details>
-                <summary>{data.title}</summary>
-                <ul className="source-details">
-                    <li key={1}>{data.subreddit_name_prefixed}</li>
-                    <li key={2}>{data.created}</li>
+            <div>
+                <details>
+
+                    <summary>{data.title}</summary>
+                    <ul className="source-details">
+                        <li key={1}>{data.subreddit_name_prefixed}</li>
+                        <li key={2}>{data.created}</li>
+                    </ul>
+                    by {data.author}<br></br>
+                    {props.data.url ? <img className="img-article" src={props.data.url} /> : ''}
+                </details>
+                <ul className="state-bar">
+                    <li key={1} className="bar-element"><img className="icons-article" src={arrowUp} /><h5 className="counters">{data.ups}</h5></li>
+                    <li key={2} className="bar-element"><img className="icons-article" src={arrowDown} /><h5 className="counters">{data.down}</h5></li>
+                    <li key={3} className="bar-element" onClick={handleDisplayComments}><img className="icons-article" src={comments} /><h5 className="counters">{data.num_comments}</h5></li>
                 </ul>
-                by {data.author}<br></br>
-                {props.data.url ? <img className="img-article" src={props.data.url} /> : ''}
-            </details>
-            <ul className="state-bar">
-                <li key={1} className="bar-element"><img className="icons-article" src={arrowUp} /><h5 className="counters">{data.ups}</h5></li>
-                <li key={2} className="bar-element"><img className="icons-article" src={arrowDown} /><h5 className="counters">{data.down}</h5></li>
-                <li key={3} className="bar-element" onClick={handleDisplayComments}><img className="icons-article" src={comments} /><h5 className="counters">{data.num_comments}</h5></li>
-            </ul>
-            
-            <Comments data={props.data} style={commentsStyle} adds={posts} onClick={handleDisplayComments}/>
-            
-                     
+                <Comments data={props.data} style={commentsStyle} adds={posts} onClick={handleDisplayComments} />
+            </div>
+
+
+
+
         </>
 
     )
