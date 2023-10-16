@@ -50,12 +50,13 @@ export const getCarousel = async () => {
     const json = await response.json();
     return sortArrayObjects(json.data.children, 1)
 }
-/*
-export const search = async () => {
-    const response = await fetch(`https://www.reddit.com/r/Jujutsushi/comments/jujutsu_kaisen_chapter_238_prerelease_leaks_thread`);
+
+export const search = async (words) => {
+    const response = await fetch(`https://www.reddit.com/search.json?q=${words}`);
     const json = await response.json();
-    return json
-}*/
+    console.log(json.data.children);
+    return json.data.children
+}
 
 export const getPosts = async (link) => {
     let response = await fetch(`https://www.reddit.com${link.slice(0, -1)}.json`);
@@ -65,3 +66,4 @@ export const getPosts = async (link) => {
 export let arreglo = await getArticles();
 export let carousel = await getCarousel()
 console.log(carousel);
+console.log(arreglo);

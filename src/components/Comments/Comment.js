@@ -57,7 +57,7 @@ export const Comments = (props) => {
 
     return (
         <>
-            <div style={props.style} class="pop-comments">
+            <div style={props.style} className="pop-comments">
                 <div className="close-btn">{props.data.num_comments} Comments for: {props.data.title} <input type="button" value="X" onClick={props.onClick} /></div>
                
                 <ul className="list-posts">

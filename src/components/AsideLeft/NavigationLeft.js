@@ -1,25 +1,30 @@
 import React from "react";
+import { useState } from "react";
+import { Search } from "../Search";
 
 export const NavAsideLeft = () => {
-    
+    const [topic, setTopic]= useState('');
+
+    const handleClick=(e)=>{
+        console.log(e.target.innerHTML);
+        setTopic(e.target.innerHTML);
+    }
+    console.log(topic);
     return (
         <section id="aside-left">
             <ul>
-                <li>Home</li>
-                <li>Popular</li>
+                
+                <li onClick={handleClick}>Popular</li>
             </ul>
-            <legend>RECENT</legend>
-            <ul>
-                <li>Recent</li>
-            </ul>
+            
             <legend>TOPICS</legend>
             <ul>
-                <li>Gaming</li>
-                <li>Sports</li>
-                <li>Business</li>
-                <li>Crypto</li>
-                <li>Television</li>
-                <li>Celebrity</li>
+                <li key="Gaming" onClick={handleClick}>Gaming</li>
+                <li key="Sports" onClick={handleClick}>Sports</li>
+                <li key="Business" onClick={handleClick}>Business</li>
+                <li key='Crypto' onClick={handleClick}>Crypto</li>
+                <li key='Television' onClick={handleClick}>Television</li>
+                <li key='Celebrity' onClick={handleClick}>Celebrity</li>
             </ul>
 
         </section>
