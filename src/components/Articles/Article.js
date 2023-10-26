@@ -89,7 +89,7 @@ export const Article = (props) => {
 
     return (
         <>
-            <div>
+            <div className="article-section">
                 <details>
 
                     <summary>{data.title}</summary>

@@ -4,7 +4,7 @@
     height: 50%;
     overflow-y:scroll;
     text-align: justify;
-    background-color: whitesmoke;
+    background-color: chocolate;
     
 }
 
@@ -12,7 +12,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: chocolate;
+    color: white;
     position: sticky;
     top: -0.5%;
     margin-top: 0px;
@@ -34,9 +35,9 @@
 }
 
 .list-posts details:nth-child(even){
-    background-color: wheat;
+    background-color: white;
 }
 
 .list-posts details:nth-child(odd){
-    background-color: turquoise;
+    background-color: whitesmoke;
 }

@@ -9,14 +9,14 @@ import { useEffect } from 'react';
 import { loadArticles, loadCarousel, loadTopics } from './app/store';
 function App(props) {
   const { state, dispatch } = props;
-  /*const onFirstRender = () => {
+  const onFirstRender = () => {
     dispatch(loadArticles());
-    dispatch(loadCarousel());
+    //dispatch(loadCarousel());
     dispatch(loadTopics());
   }
   useEffect(onFirstRender, [])
   console.log(state.articles)
-*/
+  console.log(state.searchTerm)
   return (
     <div className="App">
       <header className="App-header">

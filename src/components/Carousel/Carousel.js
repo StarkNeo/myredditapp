@@ -4,7 +4,7 @@ import './carousel.css';
 import { Slide } from "./Slide";
 import { carousel } from "../../services/apiconnect";
 
-export const Carousel = () => {
+export const Carousel = (props) => {
     const [slides, setSlides] = useState(carousel);
     
     function SliderLeft() {

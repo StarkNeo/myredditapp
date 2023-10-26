@@ -22,7 +22,7 @@ const articlesReducer=(state=articlesInitialState,action)=>{
     }
 }
 
-//CAROUSEL
+/*//CAROUSEL
 //Initial State
 const carouselInitialState=[];
 
@@ -39,21 +39,21 @@ export const loadCarousel=()=>{
 const carouselReducer=(state=carouselInitialState, action)=>{
     switch (action.type) {
         case 'carousel/loadCarousel':
-            return action.payload;
+            return action.payload
         default:
             return state;
     }
 }
-
+*/
 //SEARCH BAR
 //State
 const searchInitialState='';
 //Action creator
 //Dispatched when the user select one of the topic in the aside left menu
-const setSearchTerm=(term)=>{
+export const setSearchTerm=(term)=>{
     return {
         type: 'searchTerm/setSearchTerm',
-        payload: term.target.innerHTML
+        payload: term
     }
 };
 
@@ -121,7 +121,6 @@ const topicsReducer=(state=topicsInitialState, action)=>{
 //STORE
 const reducers ={
     articles:articlesReducer,
-    carousel:carouselReducer,
     searchTerm:searchReducer,
     topics:topicsReducer,
 }
