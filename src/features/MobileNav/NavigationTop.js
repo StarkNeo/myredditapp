@@ -22,7 +22,6 @@ export const NavigationTop = (props) => {
             let itemsFound = await search(e.target.innerHTML)
             dispatch(articlesSelected(itemsFound))
         }
-        console.log(e.target)
         dispatch(setSearchTerm(e.target.innerHTML))
 
     }
@@ -44,7 +43,7 @@ export const NavigationTop = (props) => {
                                             <summary className="type">{element.type}</summary>
                                         
                                         <ul id="top-list-subtype">
-                                            {element.subtype.map(element => (<li className="subtype" onClick={handleClick}>{element}</li>))}
+                                            {element.subtype.map(element => (<li key={element} className="subtype" onClick={handleClick}>{element}</li>))}
                                         </ul>
                                     </details>
 
@@ -64,7 +63,7 @@ export const NavigationTop = (props) => {
                         {topics.map(element => {
                             if (element.id >= 7) {
                                 return (
-                                    <option className="type" onClick={handleClick}>{element.type}</option>
+                                    <option key={element.id} className="type" onClick={handleClick}>{element.type}</option>
                                 )
                             }
 

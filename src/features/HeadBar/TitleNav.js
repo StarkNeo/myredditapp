@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import './titleNav.css';
 import { Search } from "./Search";
 import { ListMenu } from "./Menu";

@@ -1,8 +1,8 @@
 import React from "react";
-import lupa from '../Assets/icon-search.svg';
+import lupa from '../../Assets/icon-search.svg'
 import { useState } from "react";
-import { search } from "../services/apiconnect";
-import { setSearchTerm, articlesSelected, clearSearchTerm, loadArticles } from "../app/store";
+import { search } from "../../services/apiconnect";
+import { setSearchTerm, articlesSelected, clearSearchTerm, loadArticles } from "../../app/store";
 
 export const Search = (props) => {
     const { term, dispatch } = props;
@@ -25,7 +25,6 @@ export const Search = (props) => {
         dispatch(loadArticles())
     }
     const handleChange = (e) => {
-        console.log(e.target.value)
         setWords(e.target.value)
     }
     return (

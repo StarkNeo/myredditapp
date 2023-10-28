@@ -1,22 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import { TitleBar } from './components/TitleNav';
-import { NavAsideLeft } from './components/AsideLeft/NavigationLeft';
-import { NavAsideRight } from './components/NavigationTop/NavigationTop';
-import { Articles } from './components/Articles/Articles';
-import { Carousel } from './components/Carousel/Carousel';
+import { TitleBar } from '../features/HeadBar/TitleNav';
+import { NavAsideLeft } from '../features/AsideLeft/NavigationLeft';
+import { Articles } from '../features/Articles/Articles';
+import { Carousel } from '../features/Carousel/Carousel';
 import { useEffect } from 'react';
-import { loadArticles, loadCarousel, loadTopics } from './app/store';
+import { loadArticles,loadTopics } from './store';
 function App(props) {
   const { state, dispatch } = props;
   const onFirstRender = () => {
     dispatch(loadArticles());
-    //dispatch(loadCarousel());
     dispatch(loadTopics());
   }
   useEffect(onFirstRender, [])
-  console.log(state.articles)
-  console.log(state.searchTerm)
   return (
     <div className="App">
       <header className="App-header">

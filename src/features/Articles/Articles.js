@@ -1,10 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { getComments } from "../../services/apiconnect";
 import { Article } from "./Article";
-import { loadArticles } from "../../app/store";
 import './articles.css'
-import { NavigationTop } from "../NavigationTop/NavigationTop";
+import { NavigationTop } from "../MobileNav/NavigationTop";
 export const Articles = (props) => {
     const { articles, dispatch } = props;
     

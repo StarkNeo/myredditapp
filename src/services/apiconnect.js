@@ -1,5 +1,5 @@
 import React from "react";
-import { Articles } from "../components/Articles/Articles";
+import { Articles } from "../features/Articles/Articles";
 //https://www.reddit.com/r/{listing}.json?limit={count}&t={timeframe}
 
 /*The values that you can choose from are:
@@ -54,7 +54,6 @@ export const getCarousel = async () => {
 export const search = async (words) => {
     const response = await fetch(`https://www.reddit.com/search.json?q=${words}`);
     const json = await response.json();
-    console.log(json.data.children);
     return json.data.children
 }
 
@@ -65,5 +64,3 @@ export const getPosts = async (link) => {
 }
 export let arreglo = await getArticles();
 export let carousel = await getCarousel()
-console.log(carousel);
-console.log(arreglo);

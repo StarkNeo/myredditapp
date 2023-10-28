@@ -27,33 +27,10 @@ const articlesReducer=(state=articlesInitialState,action)=>{
             return action.payload
         default:
             return state
-            break;
+            
     }
 }
 
-/*//CAROUSEL
-//Initial State
-const carouselInitialState=[];
-
-//Action creator
-//Dispatched when application is deployed
-
-export const loadCarousel=()=>{
-    return {
-        type:'carousel/loadCarousel',
-        payload: carousel
-    }
-}
-//Reducer
-const carouselReducer=(state=carouselInitialState, action)=>{
-    switch (action.type) {
-        case 'carousel/loadCarousel':
-            return action.payload
-        default:
-            return state;
-    }
-}
-*/
 //SEARCH BAR
 //State
 const searchInitialState='Popular';
@@ -82,7 +59,7 @@ const searchReducer=(state=searchInitialState, action)=>{
             return state='Popular'    
         default:
             return state;
-            break;
+            
     }
 } 
 
@@ -135,5 +112,3 @@ const reducers ={
 }
 
 export const store =configureStore({reducer:combineReducers(reducers)});
-/*store.dispatch(loadArticles());
-console.log(store.getState())*/

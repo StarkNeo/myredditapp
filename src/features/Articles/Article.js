@@ -6,7 +6,7 @@ import './articles.css';
 import { Comments } from "../Comments/Comment";
 import { useState, useEffect } from "react";
 import { getPosts } from "../../services/apiconnect";
-import { NavAsideRight } from "../NavigationTop/NavigationTop";
+import { NavAsideRight } from "../MobileNav/NavigationTop";
 
 export const Article = (props) => {
     const [showComments, setShowComments] = useState(false);

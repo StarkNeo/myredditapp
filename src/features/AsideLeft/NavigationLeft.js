@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Search } from "../Search";
-import { loadTopics } from "../../app/store";
 import { setSearchTerm } from "../../app/store";
 import { articlesSelected } from "../../app/store";
 import { search } from "../../services/apiconnect";
@@ -13,15 +11,8 @@ export const NavAsideLeft = (props) => {
 
     const handleClickShowMore = () => {
         setShow(!show);
-
     }
 
-    /*
-    const onFirstRender=()=>{
-        dispatch(loadTopics());
-    }
-    useEffect(onFirstRender,[]);
-*/
     const handleClick = async (e) => {
         if (e.target.innerHTML === 'Popular') {
             dispatch(loadArticles())
@@ -30,7 +21,6 @@ export const NavAsideLeft = (props) => {
             let itemsFound = await search(e.target.innerHTML)
             dispatch(articlesSelected(itemsFound))
         }
-        console.log(e.target)
         dispatch(setSearchTerm(e.target.innerHTML))
 
     }
@@ -48,7 +38,7 @@ export const NavAsideLeft = (props) => {
                             <details className="topic-category" key={element.id}>
                                 <summary className="type">{element.type}</summary>
                                 <ul id="list-subtype">
-                                    {element.subtype.map(element => (<li className="subtype" onClick={handleClick}>{element}</li>))}
+                                    {element.subtype.map(element => (<li key={element} className="subtype" onClick={handleClick}>{element}</li>))}
                                 </ul>
                             </details>
                         )
@@ -59,15 +49,19 @@ export const NavAsideLeft = (props) => {
 
             <input id="btn-show-topics" type="button" value={!show ? 'Show more' : 'Show less'} onClick={handleClickShowMore} />
             <section id="complement-topics" style={!show ? { display: 'none' } : { display: 'block' }}>
+                <ul id="list-complements">
                 {topics.map(element => {
                     if (element.id >= 7) {
-                        return (<ul id="list-complements">
-                            <li className="type" onClick={handleClick}>{element.type}</li>
-                        </ul>)
+                        return (
+                            <li key={element.id} className="type" onClick={handleClick}>{element.type}</li>
+                        )
                     }
 
 
-                })}
+                }
+                
+                )}
+                </ul>
             </section>
 
         </section>
