@@ -2,7 +2,7 @@
     display: flex;
     padding-left: 0px;
     width: 90%;
-    
+    list-style: none;
 }
 
 .source-details li{
@@ -36,4 +36,9 @@
     display: block;
     width: 80%;
     margin: auto;
+}
+#title-sec-articles{
+    text-align: center;
+    text-decoration: underline;
+
 }

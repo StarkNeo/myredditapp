@@ -4,12 +4,12 @@ import './titleNav.css';
 import { Search } from "./Search";
 import { ListMenu } from "./Menu";
 
-export const TitleBar =()=>{
-
+export const TitleBar =(props)=>{
+    const {term, dispatch}=props;
     return (
         <nav id="title-Nav">
-            <img id="logo" src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"></img>
-            <Search />
+            <div id="logo">R</div>
+            <Search term={term} dispatch={dispatch} />
             <ListMenu />
         </nav>
        

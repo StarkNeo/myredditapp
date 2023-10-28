@@ -37,12 +37,11 @@ export const Carousel = (props) => {
 
     return (
         <div id="slides">
-            <input className="slider-btn" type="button" onClick={SlideRight} value="<" />
+            <input className="slider-btn-left" type="button" onClick={SlideRight} value="" />
             <Slide topic={slides[0].data.title} subreddit={slides[0].data.subreddit_name_prefixed} url={slides[0].data.url} media={slides[0].data.secure_media ? slides[0].data.secure_media.reddit_video.fallback_url : ''} />
             <Slide topic={slides[1].data.title} subreddit={slides[1].data.subreddit_name_prefixed} url={slides[1].data.url} media={slides[1].data.secure_media ? slides[1].data.secure_media.reddit_video.fallback_url : ''} />
             <Slide topic={slides[2].data.title} subreddit={slides[2].data.subreddit_name_prefixed} url={slides[2].data.url} media={slides[2].data.secure_media ? slides[2].data.secure_media.reddit_video.fallback_url : ''} />
-
-            <input className="slider-btn" type="button" onClick={SliderLeft} value=">" />
+            <input className="slider-btn-right" type="button" onClick={SliderLeft} value="" />
 
         </div>
 

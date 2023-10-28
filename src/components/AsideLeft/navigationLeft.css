@@ -1,0 +1,34 @@
+.subtype, .type{
+    cursor: pointer;
+    text-overflow: ellipsis;
+}
+#btn-show-topics{
+    background-color: chocolate;
+    color: white;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    border: none;
+}
+#main-topics{
+    padding-left:2.5rem;
+}
+legend{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.topic-category{
+    margin-bottom: 1rem;
+}
+.topic-category ul{
+    padding-left: 0px;
+    
+}
+#title-nav-left{
+    margin-left: 2.5rem;
+}
+#list-subtype{
+    list-style: none;
+}
+#list-complements{
+    list-style: none;
+}

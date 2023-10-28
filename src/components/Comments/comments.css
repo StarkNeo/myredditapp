@@ -35,9 +35,25 @@
 }
 
 .list-posts details:nth-child(even){
-    background-color: white;
+    border-bottom: 1px solid white;
+    color: white;
 }
 
 .list-posts details:nth-child(odd){
-    background-color: whitesmoke;
+    border-bottom: 1px solid white;
+    color: beige;
+}
+
+.btn-posts{
+    background-color:chocolate;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-posts:hover{
+    
+    border: 2px solid white;
+    border-radius: 100%;
 }

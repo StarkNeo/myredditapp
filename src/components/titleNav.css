@@ -8,14 +8,20 @@
     border-bottom: 1px solid gainsboro;
     position: fixed;
     background-color: white;
-    top: -1%;
+    top: 0%;
     z-index: 999;
 }
 
 #logo{
-    width: 120px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-left: 2rem;
+    border: none;
+    border-radius: 100%;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*Search Styles*/
 
@@ -35,60 +41,16 @@
 }
 .lupa{
     width: 20px;
+    cursor: pointer;
 }
 
-/*ListMenu Styles*/
-#menu{
-    list-style: none;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 20%;
-}
-li{
-    display: flex;
 
-}
-#login-button{
-    border-radius: 20px;
-    font-size: 1rem;
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-    background-color: chocolate;
-}
-.sub-nav{
-    display: none;
-    position: absolute;
-    margin-left: -10.5rem;
-    margin-top: 3rem;
-    padding: 1.8rem 1rem;
-    color: black;
-    font-size: 1rem;
-    background-color: whitesmoke;
-    list-style: none;
-    width:max-content;
-    border-radius: 20px;
-    text-align: justify;
-    line-height: 2rem;
-}
-#elipsis{
-    font-size: 2rem; 
-    font-weight: bold;
-    padding: 0;
-    border: none;
-    background-color:transparent;
+#title-nav-left{
+    cursor: pointer;
 }
 
-.drop-down{
-    padding-right: 1rem;
-    text-align: center;
-}
-
-.drop-down:hover > .sub-nav{
-    display: block;
-    list-style: none;
-        
-    
+#visit{
+    color: chocolate;
+    height: 2.5rem;
+    margin-right: 1rem;
 }

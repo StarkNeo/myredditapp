@@ -58,7 +58,7 @@ export const Comments = (props) => {
     return (
         <>
             <div style={props.style} className="pop-comments">
-                <div className="close-btn">{props.data.num_comments} Comments for: {props.data.title} <input type="button" value="X" onClick={props.onClick} /></div>
+                <div className="close-btn">{props.data.num_comments} Comments for: {props.data.title} <input className="btn-posts" type="button" value="X" onClick={props.onClick} /></div>
                
                 <ul className="list-posts">
                     {comms !==null? comms.map(element => (

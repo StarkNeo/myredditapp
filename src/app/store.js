@@ -1,6 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { arreglo, carousel } from "../services/apiconnect";
 import { topics } from "../services/topics";
+import { search } from "../services/apiconnect";
 //ARTICLES
 //State
 const articlesInitialState=[];
@@ -11,10 +12,18 @@ export const loadArticles=()=>{
         payload: arreglo
     }
 }
+export const articlesSelected=(itemsFound)=>{
+    return {
+        type: 'articles/articlesSelected',
+        payload:itemsFound
+    }
+}
 //Reducer
 const articlesReducer=(state=articlesInitialState,action)=>{
     switch (action.type) {
         case 'articles/loadArticles':
+            return action.payload
+        case 'articles/articlesSelected':
             return action.payload
         default:
             return state
@@ -47,7 +56,7 @@ const carouselReducer=(state=carouselInitialState, action)=>{
 */
 //SEARCH BAR
 //State
-const searchInitialState='';
+const searchInitialState='Popular';
 //Action creator
 //Dispatched when the user select one of the topic in the aside left menu
 export const setSearchTerm=(term)=>{
@@ -58,7 +67,7 @@ export const setSearchTerm=(term)=>{
 };
 
 //Dispatched when the user click the clear search button
-const clearSearchTerm=()=>{
+export const clearSearchTerm=()=>{
     return{
         type: 'searchTerm/clearSearchTerm'
     }
@@ -70,7 +79,7 @@ const searchReducer=(state=searchInitialState, action)=>{
         case 'searchTerm/setSearchTerm':
             return state=action.payload
         case 'searchTerm/clearSearchTerm':
-            return state=''    
+            return state='Popular'    
         default:
             return state;
             break;

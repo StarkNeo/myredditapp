@@ -20,13 +20,13 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <TitleBar />
+        <TitleBar term={props.state} dispatch={dispatch} />
       </header>
       <main>
         <NavAsideLeft topics={state.topics} dispatch={dispatch} />
         <section id='articles'>
           <Carousel />
-          <Articles articles={state.articles} dispatch={dispatch} />
+          <Articles term={state.searchTerm} articles={state.articles} dispatch={dispatch} />
         </section>
         
       </main>
