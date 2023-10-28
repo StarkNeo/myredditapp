@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { TitleBar } from './components/TitleNav';
 import { NavAsideLeft } from './components/AsideLeft/NavigationLeft';
-import { NavAsideRight } from './components/AsideRight/NavigationRight';
+import { NavAsideRight } from './components/NavigationTop/NavigationTop';
 import { Articles } from './components/Articles/Articles';
 import { Carousel } from './components/Carousel/Carousel';
 import { useEffect } from 'react';
@@ -26,7 +26,7 @@ function App(props) {
         <NavAsideLeft topics={state.topics} dispatch={dispatch} />
         <section id='articles'>
           <Carousel />
-          <Articles term={state.searchTerm} articles={state.articles} dispatch={dispatch} />
+          <Articles topics={state.topics} term={state.searchTerm} articles={state.articles} dispatch={dispatch} />
         </section>
         
       </main>

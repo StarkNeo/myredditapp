@@ -1,0 +1,53 @@
+#nav-top{
+    border-right: 1px solid gainsboro;
+    width: 90%;
+    height: auto;
+    display: none;
+    border-bottom: 1px solid chocolate;
+      }
+  
+#top-main-topics{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    align-items: baseline;
+    font-size: 12px;
+    padding: 0px;
+}
+#top-list-complements{
+    list-style: none;
+    display: flex;
+    background-color: white;
+}
+
+#title-nav-top{
+    margin-top: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.top-topic-category{
+    margin-left: 2rem;
+}
+
+#top-btn-show-topics{
+    background-color: chocolate;
+    color: white;
+    width: fit-content;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    border: none;
+}
+#top-list-subtype{
+    list-style: none;
+}
+
+@media only screen and (max-width:540px){
+    #nav-top{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #title-nav-top{
+        display: block;
+    }
+}

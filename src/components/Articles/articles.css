@@ -42,3 +42,19 @@
     text-decoration: underline;
 
 }
+#aside-nav{
+    display: none;
+}
+@media only screen and (max-width:818px){
+    .state-bar{
+        width: 100%;
+    }
+    .article-section summary{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width:540px){
+    #aside-nav{
+        display: flex;
+    }
+}

@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    height: 10%;
     color: white;
     border-bottom: 1px solid gainsboro;
     position: fixed;
@@ -53,4 +54,16 @@
     color: chocolate;
     height: 2.5rem;
     margin-right: 1rem;
+}
+
+
+
+@media only screen and (max-width:794px){
+    #visit{
+        display: none;
+
+    }
+    #search-bar{
+        width: 72%;
+    }
 }

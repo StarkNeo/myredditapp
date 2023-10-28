@@ -81,3 +81,9 @@ a{
 .slide-subredit{
     text-decoration: underline;
 }
+
+@media only screen and (max-width:1046px){
+    #slides{
+        display: none;
+    }
+}

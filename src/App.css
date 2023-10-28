@@ -17,11 +17,6 @@ main{
   justify-content: space-between;
 }
 
-#aside-left{
-  border-right: 1px solid gainsboro;
-  width: 18%;
-  height: auto;
-}
 
 #articles{
   width: 100%;
