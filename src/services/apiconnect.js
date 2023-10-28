@@ -1,5 +1,4 @@
-import React from "react";
-import { Articles } from "../features/Articles/Articles";
+
 //https://www.reddit.com/r/{listing}.json?limit={count}&t={timeframe}
 
 /*The values that you can choose from are:

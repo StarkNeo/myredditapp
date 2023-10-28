@@ -4,8 +4,10 @@
     height: 50%;
     overflow-y:scroll;
     text-align: justify;
-    background-color: chocolate;
-    
+    background-color: white;
+    border: 3px solid chocolate;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .close-btn{
@@ -27,6 +29,7 @@
     margin-top: 2rem;
     height: 80%;
     margin-right: 1rem;
+    
 }
 
 .list-posts details{
@@ -36,12 +39,14 @@
 
 .list-posts details:nth-child(even){
     border-bottom: 1px solid white;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 
 .list-posts details:nth-child(odd){
     border-bottom: 1px solid white;
-    color: beige;
+    color: chocolate;
+    font-weight: bolder;
 }
 
 .btn-posts{
@@ -51,11 +56,6 @@
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-}
-.btn-posts:hover{
-    
-    border: 2px solid white;
-    border-radius: 100%;
 }
 
 @media only screen and (max-width:1044px){

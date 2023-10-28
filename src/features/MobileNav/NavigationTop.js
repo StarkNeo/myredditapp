@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useState } from "react";
 import { setSearchTerm } from "../../app/store";
 import { articlesSelected } from "../../app/store";

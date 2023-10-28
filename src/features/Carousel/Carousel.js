@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import './carousel.css';
 import { Slide } from "./Slide";
 import { carousel } from "../../services/apiconnect";
