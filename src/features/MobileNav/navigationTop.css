@@ -30,8 +30,9 @@
 }
 
 #top-btn-show-topics{
-    background-color: chocolate;
-    color: white;
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
     width: fit-content;
     margin-top: 2rem;
     margin-left: 2.5rem;

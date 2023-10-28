@@ -30,7 +30,7 @@ export const Search = (props) => {
     return (
         <>
             <div id="search-bar">
-                <img className="lupa" src={lupa} onClick={handleClick} />
+                <img className="lupa" src={lupa} onClick={handleClick} alt="magnifying glass" />
                 <input className="search-btn" type="search" placeholder="Search Reddit" onChange={handleChange} onDoubleClick={handleDoubleClick} value={words} />
             </div>
         </>

@@ -13,7 +13,6 @@ export const Article = (props) => {
     const [posts, setPosts] = useState(null)
 
 
-
     const commentsStyle = {
         display: showComments === true ? 'block' : 'none',
 
@@ -98,12 +97,12 @@ export const Article = (props) => {
                         <li key={2}>{data.created}</li>
                     </ul>
                     by {data.author}<br></br>
-                    {props.data.url ? <img className="img-article" src={props.data.url} /> : ''}
+                    {props.data.url ? <img className="img-article" src={props.data.url} alt="picture added to this articles" /> : ''}
                 </details>
                 <ul className="state-bar">
-                    <li key={1} className="bar-element"><img className="icons-article" src={arrowUp} /><h5 className="counters">{data.ups}</h5></li>
-                    <li key={2} className="bar-element"><img className="icons-article" src={arrowDown} /><h5 className="counters">{data.down}</h5></li>
-                    <li key={3} className="bar-element" onClick={handleDisplayComments}><img className="icons-article" src={comments} /><h5 className="counters">{data.num_comments}</h5></li>
+                    <li key={1} className="bar-element"><img className="icons-article" src={arrowUp} alt="arrow ups" />{data.ups}</li>
+                    <li key={2} className="bar-element"><img className="icons-article" src={arrowDown} alt="arrow down" />{data.down}</li>
+                    <li key={3} className="bar-element" onClick={handleDisplayComments}><img className="icons-article" src={comments} alt="box of comments" />{data.num_comments}</li>
                 </ul>
                 <Comments data={props.data} style={commentsStyle} adds={posts} onClick={handleDisplayComments} />
             </div>
